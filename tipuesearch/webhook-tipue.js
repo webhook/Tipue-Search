@@ -141,6 +141,7 @@ var tipuesearch_stem = tipuesearch_stem || {"words": [
                }
 
                var curPage = getURLP('page') || 1;
+               var hadFirstSearch = false;
 
                if (getURLP('q'))
                {
@@ -148,7 +149,6 @@ var tipuesearch_stem = tipuesearch_stem || {"words": [
                     getTipueSearch((curPage - 1) * set.show, true);
                }               
                
-               var hadFirstSearch = false;
 
                $(this).keyup(function(event)
                {
