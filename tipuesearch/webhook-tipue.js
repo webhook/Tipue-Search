@@ -181,7 +181,7 @@ var tipuesearch_stem = tipuesearch_stem || {"words": [
 
                function getTipueSearch(start, replace, noPushState)
                {
-                    $(document).trigger('tipue_search_start');
+                    $(document).trigger('tipue_search_started');
                     $('#tipue_search_content').hide();
                     var out = '';
                     var results = '';
@@ -631,7 +631,7 @@ var tipuesearch_stem = tipuesearch_stem || {"words": [
                     $('#tipue_search_content').html(out);
                     $('#tipue_search_content').slideDown(200);
 
-                    $(document).trigger('tipue_search_end');
+                    $(document).trigger('tipue_search_finished');
                     
                     $('#tipue_search_replaced').click(function()
                     {
