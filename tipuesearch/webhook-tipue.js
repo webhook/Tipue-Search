@@ -181,6 +181,7 @@ var tipuesearch_stem = tipuesearch_stem || {"words": [
 
                function getTipueSearch(start, replace, noPushState)
                {
+                    $(document).trigger('tipue_search_start');
                     $('#tipue_search_content').hide();
                     var out = '';
                     var results = '';
@@ -629,6 +630,8 @@ var tipuesearch_stem = tipuesearch_stem || {"words": [
                
                     $('#tipue_search_content').html(out);
                     $('#tipue_search_content').slideDown(200);
+
+                    $(document).trigger('tipue_search_end');
                     
                     $('#tipue_search_replaced').click(function()
                     {
